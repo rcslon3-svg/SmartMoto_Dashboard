@@ -1,0 +1,9 @@
+.pio/
+.vscode/
+node_modules/
+build/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
