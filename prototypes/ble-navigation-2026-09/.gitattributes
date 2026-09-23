@@ -1,0 +1,2 @@
+# Keep imported file bytes unchanged so SOURCE_SHA256.txt remains valid after clone.
+* -text whitespace=cr-at-eol

@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ <uses-permission android:name="demo.cyd.companion.DIAGNOSTICS"/>
+ <uses-permission android:name="android.permission.INTERNET"/>
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+ <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+ <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+ <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+ <queries><package android:name="demo.cyd.companion"/></queries>
+ <application android:name="demo.cyd.companion.App" android:label="CYD Диагност" android:icon="@android:drawable/ic_menu_info_details" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="true" android:supportsRtl="true">
+  <activity android:name="demo.cyd.companion.ObserverActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+  <receiver android:name="demo.cyd.companion.MirrorReceiver" android:exported="true" android:permission="demo.cyd.companion.DIAGNOSTICS"/>
+  <receiver android:name="demo.cyd.companion.ObserverRecovery" android:exported="false"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"/><action android:name="android.intent.action.MY_PACKAGE_REPLACED"/></intent-filter></receiver>
+  <service android:name="demo.cyd.companion.UploadJob" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
+  <service android:name="demo.cyd.companion.ObserverRemoteService" android:exported="false" android:foregroundServiceType="dataSync"/>
+ </application>
+</manifest>

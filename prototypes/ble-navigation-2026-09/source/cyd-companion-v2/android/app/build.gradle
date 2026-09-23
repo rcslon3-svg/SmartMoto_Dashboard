@@ -1,0 +1,10 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'demo.cyd.companion'
+ compileSdk 36
+ defaultConfig { applicationId 'demo.cyd.companion'; minSdk 33; targetSdk 36; versionCode 5; versionName '2.0.4' }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+ sourceSets.main.java.srcDirs += '../shared/src/main/java'
+ testOptions.unitTests.all { systemProperty 'robolectric.dependency.repo.url', 'https://repo.maven.apache.org/maven2' }
+}
+dependencies { testImplementation 'junit:junit:4.13.2'; testImplementation 'org.robolectric:robolectric:4.14.1' }

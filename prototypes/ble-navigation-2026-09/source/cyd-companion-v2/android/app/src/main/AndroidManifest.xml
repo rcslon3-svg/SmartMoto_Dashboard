@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ <permission android:name="demo.cyd.companion.DIAGNOSTICS" android:protectionLevel="signature"/>
+ <uses-permission android:name="demo.cyd.companion.DIAGNOSTICS"/>
+ <queries><package android:name="demo.cyd.diagnostics"/></queries>
+ <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+ <uses-feature android:name="android.software.companion_device_setup" android:required="true"/>
+ <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+ <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+ <uses-permission android:name="android.permission.INTERNET"/>
+ <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+ <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+ <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+ <uses-permission android:name="android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE"/>
+ <uses-permission android:name="android.permission.REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+ <uses-permission android:name="android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND"/>
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+ <application android:name=".BridgeApp" android:label="CYD Companion 2" android:icon="@android:drawable/stat_sys_data_bluetooth" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:usesCleartextTraffic="true" android:supportsRtl="true">
+  <activity android:name=".MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+  <service android:name=".PresenceService" android:exported="true" android:permission="android.permission.BIND_COMPANION_DEVICE_SERVICE"><intent-filter><action android:name="android.companion.CompanionDeviceService"/></intent-filter></service>
+  <service android:name=".LinkService" android:exported="false" android:foregroundServiceType="connectedDevice"/>
+  <receiver android:name=".ScanReceiver" android:exported="false"/>
+  <receiver android:name=".BridgeCommandReceiver" android:exported="true" android:permission="demo.cyd.companion.DIAGNOSTICS"/>
+  <receiver android:name=".RecoveryReceiver" android:exported="true"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"/><action android:name="android.intent.action.MY_PACKAGE_REPLACED"/><action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/></intent-filter></receiver>
+ </application>
+</manifest>

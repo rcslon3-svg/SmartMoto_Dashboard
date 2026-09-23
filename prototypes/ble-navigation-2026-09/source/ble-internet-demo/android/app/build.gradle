@@ -1,0 +1,8 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'demo.cyd.bridge'
+ compileSdk 36
+ defaultConfig { applicationId 'demo.cyd.bridge'; minSdk 31; targetSdk 36; versionCode 7; versionName '0.7.0' }
+ defaultConfig { testInstrumentationRunner 'demo.cyd.bridge.ProbeInstrumentation' }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

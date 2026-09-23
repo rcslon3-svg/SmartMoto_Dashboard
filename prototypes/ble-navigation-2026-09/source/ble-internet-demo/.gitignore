@@ -1,0 +1,7 @@
+**/.pio/
+**/.gradle/
+**/.gradle-home/
+**/build/
+android/local.properties
+server/data/
+*.log

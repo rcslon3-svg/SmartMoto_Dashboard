@@ -10,7 +10,9 @@ This is the hardware, mechanical and firmware **project repository**. The websit
 
 ## Current status
 
-Early development: mechanical layout and electronics architecture. This initial repository contains the project description, design images and a folder structure for future source files. Schematics, PCB layouts, native CAD files and project firmware have not been published here yet.
+Early development: mechanical layout and electronics architecture. The repository also preserves working BLE and navigation prototypes, including Android applications and ESP32 firmware. These prototypes are separate from the planned production instrument modules. Schematics, PCB layouts and native CAD files for the production design have not been published here yet.
+
+The [BLE and navigation prototype archive](prototypes/ble-navigation-2026-09/README.md) contains the Android bridge that responds to the nearby CYD device, its independent diagnostic app, the Google Maps NavProbe, firmware for the CYD and Waveshare boards, source hashes, wiring, protocol details and verified build commands. Its [status report](prototypes/ble-navigation-2026-09/STATUS.md) distinguishes successful builds and device observations from behavior that remains unverified.
 
 ![First exterior concept](docs/images/dial-render.jpg)
 
@@ -116,13 +118,15 @@ firmware/
   main-unit/               Future ESP32 firmware
   instrument-module/       Future STM32F103 firmware
   examples/                Future standalone bring-up sketches
+prototypes/
+  ble-navigation-2026-09/  Preserved Android, BLE, server and ESP32 source
 ```
 
-The source folders currently contain scope notes. No build or fabrication instructions are available yet.
+The production source folders currently contain scope notes. Build and connection instructions for the preserved prototypes are in their archive; production fabrication instructions are not available yet.
 
 ## Source release
 
-I intend to develop this as an open-source project and publish the design sources and Arduino-based firmware as they mature. A license has not yet been selected for this initial documentation release.
+I intend to develop this as an open-source project and publish the design sources and Arduino-based firmware as they mature. A license has not yet been selected for this repository, including the prototype source archive.
 
 ## Author
 

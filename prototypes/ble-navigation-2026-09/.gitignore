@@ -1,0 +1,11 @@
+**/.gradle/
+**/.gradle-home/
+**/.pio/
+**/build/
+**/local.properties
+**/data/
+*.log
+*.apk
+*.bin
+*.elf
+*.map
