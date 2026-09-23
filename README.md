@@ -10,7 +10,7 @@ This is the hardware, mechanical and firmware **project repository**. The websit
 
 ## Current status
 
-Early development: mechanical layout and electronics architecture. The repository also preserves working BLE and navigation prototypes, including Android applications and ESP32 firmware. These prototypes are separate from the planned production instrument modules. Schematics, PCB layouts and native CAD files for the production design have not been published here yet.
+Early development: mechanical layout and electronics architecture. A [native Fusion design backup dated 23 September 2026](mechanical/cad/README.md) is available. The repository also preserves working BLE and navigation prototypes, including Android applications and ESP32 firmware. These prototypes are separate from the planned production instrument modules. Schematics and PCB layouts for the production design have not been published here yet.
 
 The [BLE and navigation prototype archive](prototypes/ble-navigation-2026-09/README.md) contains the Android bridge that responds to the nearby CYD device, its independent diagnostic app, the Google Maps NavProbe, firmware for the CYD and Waveshare boards, source hashes, wiring, protocol details and verified build commands. Its [status report](prototypes/ble-navigation-2026-09/STATUS.md) distinguishes successful builds and device observations from behavior that remains unverified.
 
@@ -113,7 +113,7 @@ hardware/
   main-unit/               Future ESP32 schematics, PCB and BOM
   instrument-module/       Future common STM32F103 module design
 mechanical/
-  cad/                     Future native CAD and interchange files
+  cad/                     Native Fusion design backups; future STEP exports
 firmware/
   main-unit/               Future ESP32 firmware
   instrument-module/       Future STM32F103 firmware
