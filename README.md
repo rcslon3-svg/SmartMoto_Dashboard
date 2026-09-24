@@ -1,10 +1,15 @@
 # SmartMoto Dashboard
 
+[![Project website](https://img.shields.io/badge/PROJECT_WEBSITE-dashboard.smartmoto.asia-00B7E8?style=for-the-badge)](https://dashboard.smartmoto.asia/)
+[![Hackaday project log](https://img.shields.io/badge/HACKADAY-FOLLOW_THE_BUILD-F5C518?style=for-the-badge)](https://hackaday.io/project/206715-motorcycle-analog-digital-ai-dashboard)
+
+**[Visit the project website ↗](https://dashboard.smartmoto.asia/) · [Follow the build on Hackaday.io ↗](https://hackaday.io/project/206715-motorcycle-analog-digital-ai-dashboard)**
+
 **An analogue soul. A digital brain.**
 
 A custom instrument cluster for the **GPX 250 Twin**, developed by **Sergei Kuzmin**. Real needles, round displays and programmable electronics, with the character of a chronograph.
 
-[Project website & development log](https://dashboard.smartmoto.asia/) · [Original GPX workshop notes](https://gpx.smartmoto.asia/diy-instrument-panel/) · [Stock-cluster investigation](https://gpx.smartmoto.asia/instrument-cluster/)
+[Original GPX workshop notes](https://gpx.smartmoto.asia/diy-instrument-panel/) · [Stock-cluster investigation](https://gpx.smartmoto.asia/instrument-cluster/)
 
 This is the hardware, mechanical and firmware **project repository**. The website is maintained separately.
 
