@@ -19,9 +19,13 @@ Early development: mechanical layout and electronics architecture. A [native Fus
 
 The [BLE and navigation prototype archive](prototypes/ble-navigation-2026-09/README.md) contains the Android bridge that responds to the nearby CYD device, its independent diagnostic app, the Google Maps NavProbe, firmware for the CYD and Waveshare boards, source hashes, wiring, protocol details and verified build commands. Its [status report](prototypes/ble-navigation-2026-09/STATUS.md) distinguishes successful builds and device observations from behavior that remains unverified.
 
-![First exterior concept](docs/images/dial-render.jpg)
+![Current instrument layout in Fusion](docs/images/fusion-current-design.jpg)
 
-*Dial design render · First exterior concept. Errors in this render were introduced by AI. Scales, labels and display graphics are still being developed.*
+*The current Fusion model: dial faces, needles, gauge motors and round displays.*
+
+![Dashboard concept on the motorcycle](docs/images/dashboard-on-motorcycle.png)
+
+*AI-assisted visualization of how the instrument panel might look on the GPX. This is a concept image, not a photo of installed hardware.*
 
 ## Why build my own?
 
@@ -62,6 +66,18 @@ The gauge motors and needles arrived from AliExpress. I checked that the motors 
 ![Side view of the instrument assemblies](docs/images/fusion-side-view.png)
 
 *Under the dial plates: gauge motors, shafts and needle clearances.*
+
+### Round display prototypes
+
+The first display tests show an odometer and a navigation prompt on the actual round LCD hardware. An ESP32 development board drives these prototypes; the final instrument electronics are still being designed.
+
+![Odometer on the round display prototype](docs/images/odometer-display-prototype.jpg)
+
+*Odometer and trip display running on the real screen.*
+
+![Navigation prompt on the round display prototype](docs/images/navigation-display-prototype.jpg)
+
+*Turn-by-turn navigation prompt running on the real screen.*
 
 Earlier CAD studies are preserved in [docs/images/early-studies](docs/images/early-studies/). These are screenshots, not editable CAD sources.
 
@@ -112,7 +128,7 @@ Next comes refining the mechanical layout, electronics and power management, inc
 
 ```text
 docs/
-  images/                  Current render, Fusion views and block diagram
+  images/                  Fusion views, concept image, display tests and block diagram
     early-studies/         Earlier CAD screenshots
 hardware/
   main-unit/               Future ESP32 schematics, PCB and BOM
